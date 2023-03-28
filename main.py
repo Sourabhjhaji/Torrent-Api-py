@@ -208,7 +208,7 @@ async def get_search_combo(query: str, limit: Optional[int] = 0):
     start_time = time.time()
     query = query.lower()
     # just getting all_sites dictionary
-    all_sites = check_if_site_available("1337x")
+    all_sites = check_if_site_available("torlock")
     sites_list = list(all_sites.keys())
     tasks = []
     COMBO = {"data": []}
@@ -240,7 +240,7 @@ async def get_search_combo(query: str, limit: Optional[int] = 0):
 async def get_all_trending(limit: Optional[int] = 0):
     start_time = time.time()
     # just getting all_sites dictionary
-    all_sites = check_if_site_available("1337x")
+    all_sites = check_if_site_available("torlock")
     sites_list = [
         site
         for site in all_sites.keys()
@@ -278,7 +278,7 @@ async def get_all_trending(limit: Optional[int] = 0):
 async def get_all_recent(limit: Optional[int] = 0):
     start_time = time.time()
     # just getting all_sites dictionary
-    all_sites = check_if_site_available("1337x")
+    all_sites = check_if_site_available("torlock")
     sites_list = [
         site
         for site in all_sites.keys()
@@ -312,7 +312,7 @@ async def get_all_recent(limit: Optional[int] = 0):
 
 @app.get("/api/v1/sites")
 async def get_all_supported_sites():
-    all_sites = check_if_site_available("1337x")
+    all_sites = check_if_site_available("torlock")
     sites_list = [
         site
         for site in all_sites.keys()
