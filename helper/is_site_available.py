@@ -10,7 +10,6 @@ from torrents.torlock import Torlock
 from torrents.torrent_galaxy import TorrentGalaxy
 from torrents.torrentfunk import TorrentFunk
 from torrents.torrentProject import TorrentProject
-from torrents.x1337 import x1337
 from torrents.your_bittorrent import YourBittorrent
 from torrents.yts import Yts
 from torrents.zooqle import Zooqle
@@ -18,26 +17,6 @@ from torrents.zooqle import Zooqle
 
 def check_if_site_available(site):
     all_sites = {
-        "1337x": {
-            "website": x1337,
-            "trending_available": True,
-            "trending_category": True,
-            "search_by_category": True,
-            "recent_available": True,
-            "recent_category_available": True,
-            "categories": [
-                "anime",
-                "music",
-                "games",
-                "tv",
-                "apps",
-                "documentaries",
-                "other",
-                "xxx",
-                "movies",
-            ],
-            "limit": 100,
-        },
         "torlock": {
             "website": Torlock,
             "trending_available": True,
